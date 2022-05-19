@@ -1,5 +1,5 @@
 body {
-    background-color: lavender; 
+    background-color: #FFFFFF; 
     min-width: 390px;
     max-width: 960px;
     position: relative;
@@ -56,4 +56,25 @@ body {
     text-decoration: none;
     font-family: 'IBM Plex Sans', sans-serif;
 
+}
+
+.navBar {
+    font-family: 'IBM Plex Sans', sans-serif;
+    text-decoration: none;
+    color: black;
+    font-weight: 200;
+    padding: 5px;
+}
+.navBar :hover {
+    text-decoration: solid 3px underline;
+    text-decoration-color: #A465D6;
+}
+
+.months {
+    margin: 4px, 4px;
+    padding: 4px;
+    width: 300px;
+    overflow: auto;
+    white-space: nowrap;
+    
 }

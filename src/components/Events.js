@@ -38,9 +38,9 @@ const Events = (props) => {
 };
 
 
-const NavBarMonth = (ptops) => {
+const NavBarMonth = (props) => {
     return (
-        <div>
+        <div className="months">
             <span>JANUARY</span>
             <span>FEBRUARY</span>
             <span>MARCH</span>
@@ -59,10 +59,10 @@ const NavBarMonth = (ptops) => {
 
 const Navbar = () => {
     return (
-        <div>
-            <a href="#">About</a>
-            <a>Events & Workshops</a>
-            <Link to='/user'>Subscribe</Link>
+        <div className="navBar">
+            <a href="#" className="navBar">About</a>
+            <a href="#" className="navBar">Events & Workshops</a>
+            <Link to='/user' className="navBar">Subscribe</Link>
         </div>
     )
 }
@@ -75,19 +75,16 @@ const EventsList = (props) => {
 
   return (
     <div>
-      <h3>Event info</h3>
-      <img src="https://via.placeholder.com/350x197" /><br></br>
-      {/* <p id="rectangle">X</p> */}
       {events.map((event) => {
         return (
           <div key={event.id}>
+            <h2>{event.month}</h2>
+            <img src="https://via.placeholder.com/350x197" /><br></br>
             <h2 className="title">{event.title}</h2>
             <p className="date">{event.date}</p>
             <p className="description">{event.description}</p>
             <button className="RSVP"><a href="#" className="RSVP">Learn More & RSVP</a></button><br></br>
-            <img src="https://via.placeholder.com/350x197" /><br></br>
-            
-            {/* <a href="#">Learn more & RSVP</a> */}
+           
           </div>
         );
       })}
