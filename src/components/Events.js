@@ -8,6 +8,8 @@ import {
   updateDoc,
 } from "firebase/firestore";
 
+import './Events.css';
+
 const Events = (props) => {
   const [events, setEvents] = useState([]);
 
@@ -22,7 +24,7 @@ const Events = (props) => {
   }, []);
 
   return (
-    <div>
+    <div className='container'>
       <h2> Event details</h2>
       <div style={{ display: "flex" }}>
         <EventsList info={events} />
@@ -43,9 +45,9 @@ const EventsList = (props) => {
       {events.map((event) => {
         return (
           <div key={event.id}>
-            <h2>{event.title}</h2>
-            <p>{event.date}</p>
-            <p>{event.description}</p>
+            <h2 className="title">{event.title}</h2>
+            <p className="date">{event.date}</p>
+            <p className="description">{event.description}</p>
           </div>
         );
       })}
