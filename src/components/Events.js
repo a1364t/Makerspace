@@ -7,6 +7,7 @@ import {
   getDocs,
   updateDoc,
 } from "firebase/firestore";
+import {Link} from 'react-router-dom';
 
 import './Events.css';
 
@@ -27,12 +28,44 @@ const Events = (props) => {
     <div className='container'>
       <header id="topText">MakerBay Sydney</header>
       <h2> Event details</h2>
-      <div style={{ display: "flex" }}>
+      <div style={{ display: "inline" }}>
+        <NavBarMonth />
+        <Navbar />
         <EventsList info={events} />
       </div>
     </div>
   );
 };
+
+
+const NavBarMonth = (ptops) => {
+    return (
+        <div>
+            <span>JANUARY</span>
+            <span>FEBRUARY</span>
+            <span>MARCH</span>
+            <span>APRIL</span>
+            <span>MAY</span>
+            <span>JUN</span>
+            <span>JULY</span>
+            <span>AUGUST</span>
+            <span>SEPTEMBER</span>
+            <span>OCTOBER</span>
+            <span>NOVEMBER</span>
+            <span>DECEMBER</span>
+        </div>
+    )
+};
+
+const Navbar = () => {
+    return (
+        <div>
+            <a href="#">About</a>
+            <a>Events & Workshops</a>
+            <Link to='/user'>Subscribe</Link>
+        </div>
+    )
+}
 
 const EventsList = (props) => {
   if (props.info.length === 0) {
@@ -50,6 +83,8 @@ const EventsList = (props) => {
             <h2 className="title">{event.title}</h2>
             <p className="date">{event.date}</p>
             <p className="description">{event.description}</p>
+            <img src="https://via.placeholder.com/350x197" /><br></br>
+            <a href="#">Learn more & RSVP</a>
           </div>
         );
       })}
