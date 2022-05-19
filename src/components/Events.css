@@ -5,6 +5,7 @@ body {
     position: relative;
     margin: auto;
 
+
 }
 
 .container {
@@ -25,7 +26,7 @@ body {
 }
 
 .description {
-    color: blue;
+    color: black;
     text-align: left;
 }
 
@@ -69,6 +70,34 @@ body {
     text-decoration: solid 3px underline;
     text-decoration-color: #A465D6;
 }
+
+#mail,
+#mail::after {
+    display: inline-flex;
+    box-sizing: border-box;
+    height: 14px;
+    border: 2px solid;
+    color: purple;
+    /* outline: 6px solid #4B0A80; */
+}
+#mail {
+    overflow: hidden;
+    transform: scale(var(--ggs,1));
+    position: relative;
+    width: 19px;
+    border-radius: 2px
+}
+#mail::after {
+    content: "";
+    position: absolute;
+    border-radius: 3px;
+    width: 14px;
+    transform: rotate(-45deg);
+    bottom: 5px;
+    left: 0;
+    color: white;
+    outline: 2px solid #4B0A80;
+} 
 
 .months {
     margin: 4px, 4px;
