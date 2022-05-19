@@ -1,0 +1,30 @@
+body {
+    background-color: lavender; 
+    min-width: 390px;
+    max-width: 960px;
+    position: relative;
+    margin: auto;
+
+}
+
+.container {
+    text-align: center;
+    width: 50%;
+    margin: auto;
+    border: solid 1px black;
+    padding: 10px;
+}
+
+.title {
+    font-weight: bold;
+    text-align: left;
+}
+
+.date {
+    text-align: left;
+}
+
+.description {
+    color: blue;
+    text-align: left;
+}
