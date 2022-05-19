@@ -83,11 +83,13 @@ const EventsList = (props) => {
             <h2 className="title">{event.title}</h2>
             <p className="date">{event.date}</p>
             <p className="description">{event.description}</p>
-            <button className="RSVP"><a href="#" className="RSVP">Learn More & RSVP</a></button><br></br>
-           
-          </div>
+            <button className="RSVP"><a href="#" className="RSVP">Learn More & RSVP</a></button><br></br>           
+          </div>          
         );
       })}
+      <Link to='/user' className="???">Subscribe to our newsletter</Link>
+      <p>Be the first to know about events and</p>
+      <p>workshops that may interest you!</p>
     </div>
   );
 };
