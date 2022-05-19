@@ -139,7 +139,7 @@ const Users = (props) => {
           />
         </label>
         {firstNameError.length > 0 ? (
-          <div>
+          <div style={{'color': 'red'}}>
             {firstNameError.map((error) => {
               return <p key={Math.random()}>{error}</p>;
             })}
@@ -161,7 +161,7 @@ const Users = (props) => {
           />
         </label>
         {lastNameError.length > 0 ? (
-          <div>
+          <div style={{'color': 'red'}}>
             {lastNameError.map((error) => {
               return <p key={Math.random()}>{error}</p>;
             })}
@@ -183,7 +183,7 @@ const Users = (props) => {
           />
         </label>
         {emailError.length > 0 ? (
-          <div>
+          <div style={{'color': 'red'}}>
             {emailError.map((error) => {
               return <p key={Math.random()}>{error}</p>;
             })}
@@ -196,7 +196,7 @@ const Users = (props) => {
           What types of events are you interested in?
           <br />
           Select at least one from the EventsList <br />
-          <p>{checkboxError}</p>
+          <p style={{'color': 'red'}}>{checkboxError}</p>
           <input
             type="checkbox"
             name="coding"
