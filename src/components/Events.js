@@ -76,15 +76,18 @@ const EventsList = (props) => {
   return (
     <div>
       <h3>Event info</h3>
-      <p id="rectangle">X</p>
+      <img src="https://via.placeholder.com/350x197" /><br></br>
+      {/* <p id="rectangle">X</p> */}
       {events.map((event) => {
         return (
           <div key={event.id}>
             <h2 className="title">{event.title}</h2>
             <p className="date">{event.date}</p>
             <p className="description">{event.description}</p>
+            <button className="RSVP"><a href="#" className="RSVP">Learn More & RSVP</a></button><br></br>
             <img src="https://via.placeholder.com/350x197" /><br></br>
-            <a href="#">Learn more & RSVP</a>
+            
+            {/* <a href="#">Learn more & RSVP</a> */}
           </div>
         );
       })}
