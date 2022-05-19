@@ -25,6 +25,7 @@ const Events = (props) => {
 
   return (
     <div className='container'>
+      <header id="topText">MakerBay Sydney</header>
       <h2> Event details</h2>
       <div style={{ display: "flex" }}>
         <EventsList info={events} />
@@ -42,6 +43,7 @@ const EventsList = (props) => {
   return (
     <div>
       <h3>Event info</h3>
+      <p id="rectangle">X</p>
       {events.map((event) => {
         return (
           <div key={event.id}>
