@@ -62,7 +62,9 @@ const Navbar = () => {
         <div className="navBar">
             <a href="#" className="navBar">About</a>
             <a href="#" className="navBar">Events & Workshops</a>
-            <Link to='/user' className="navBar">Subscribe</Link>
+            <Link to='/user' className="navBar">Subscribe<span id="mail"></span><span id="circle"></span></Link>
+           
+          
         </div>
     )
 }
