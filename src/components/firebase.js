@@ -11,7 +11,7 @@ const firebaseConfig = {
   projectId: "makerspace-2e358",
   storageBucket: "makerspace-2e358.appspot.com",
   messagingSenderId: "868224597071",
-  appId: "1:868224597071:web:e8fca4ed61acf76e867e3a"
+  appId: "1:868224597071:web:e8fca4ed61acf76e867e3a",
 };
 
 // Initialize Firebase
