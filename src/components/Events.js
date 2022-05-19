@@ -65,7 +65,7 @@ const Navbar = () => {
       <a href="#" className="navBar">
         Events & Workshops
       </a>
-      <Link to="/user" className="navBar">
+      <Link to="/user" className="navBar"><span id="mail"></span>
         Subscribe
       </Link>
     </div>
