@@ -30,6 +30,11 @@ body {
     text-align: left;
 }
 
+.e-month {
+    text-align: left;
+    font-size: 35px;
+}
+
 #topText {
     font-weight: bolder;
     color: #4B0A80;
@@ -40,12 +45,6 @@ body {
     border-width: 5px 0 0 5px;
 }
 
-#rectangle {
-    width: 200px;
-    height: 100px;
-    background-color: lightgrey;
-    margin: 0 0 0 125px;
-}
 
 .RSVP {
     color: #FFFFFF;
@@ -70,6 +69,7 @@ body {
     text-decoration: solid 3px underline;
     text-decoration-color: #A465D6;
 }
+
 
 #mail,
 #mail::after {
@@ -99,14 +99,30 @@ body {
     outline: 2px solid #4B0A80;
 } 
 
-.months {
+.subBar {
+    color: #FFFFFF;
+    background-color: #4C0A81;
+    padding: 12px 10em; 
+    border-radius: 10px;
+    position: relative;
+    margin: 10px 10px 10px 10px;    
+    text-decoration: none;
+    font-family: 'IBM Plex Sans', sans-serif;
+    width: 32em;
+    white-space: nowrap;
+    font-size: 14px;
+    font-weight: bold;
+
+}
+
+
+/* .months {
     margin: 4px, 4px;
     padding: 4px;
     width: 300px;
     overflow: auto;
-    white-space: nowrap;
-    
-}
+    white-space: nowrap;    
+} */
 
 /* Horizontal Navbar */
 

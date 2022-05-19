@@ -83,7 +83,7 @@ const EventsList = (props) => {
       {events.map((event) => {
         return (
           <div key={event.id}>
-            <h2>{event.month}</h2>
+            <h2 className="e-month">{event.month}</h2>
             <img src="https://via.placeholder.com/350x197" />
             <br></br>
             <h2 className="title">{event.title}</h2>
@@ -98,8 +98,10 @@ const EventsList = (props) => {
           </div>
         );
       })}
-      <Link to="/user" className="???">
+      <Link to="/user">
+        <button className="subBar">
         Subscribe to our newsletter
+        </button>
       </Link>
       <p>Be the first to know about events and</p>
       <p>workshops that may interest you!</p>
