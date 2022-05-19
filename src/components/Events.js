@@ -8,9 +8,9 @@ import {
   getDocs,
   updateDoc,
 } from "firebase/firestore";
-import {Link} from 'react-router-dom';
+import { Link } from "react-router-dom";
 
-import './Events.css';
+import "./Events.css";
 
 const Events = (props) => {
   const [events, setEvents] = useState([]);
@@ -26,7 +26,7 @@ const Events = (props) => {
   }, []);
 
   return (
-    <div className='container'>
+    <div className="container">
       <header id="topText">MakerBay Sydney</header>
       <h2> Event details</h2>
       <div style={{ display: "inline" }}>
@@ -57,14 +57,20 @@ const Events = (props) => {
 
 
 const Navbar = () => {
-    return (
-        <div className="navBar">
-            <a href="#" className="navBar">About</a>
-            <a href="#" className="navBar">Events & Workshops</a>
-            <Link to='/user' className="navBar">Subscribe</Link>
-        </div>
-    )
-}
+  return (
+    <div className="navBar">
+      <a href="#" className="navBar">
+        About
+      </a>
+      <a href="#" className="navBar">
+        Events & Workshops
+      </a>
+      <Link to="/user" className="navBar">
+        Subscribe
+      </Link>
+    </div>
+  );
+};
 
 const EventsList = (props) => {
   if (props.info.length === 0) {
@@ -78,15 +84,23 @@ const EventsList = (props) => {
         return (
           <div key={event.id}>
             <h2>{event.month}</h2>
-            <img src="https://via.placeholder.com/350x197" /><br></br>
+            <img src="https://via.placeholder.com/350x197" />
+            <br></br>
             <h2 className="title">{event.title}</h2>
             <p className="date">{event.date}</p>
             <p className="description">{event.description}</p>
-            <button className="RSVP"><a href="#" className="RSVP">Learn More & RSVP</a></button><br></br>           
-          </div>          
+            <button className="RSVP">
+              <a href="#" className="RSVP">
+                Learn More & RSVP
+              </a>
+            </button>
+            <br></br>
+          </div>
         );
       })}
-      <Link to='/user' className="???">Subscribe to our newsletter</Link>
+      <Link to="/user" className="???">
+        Subscribe to our newsletter
+      </Link>
       <p>Be the first to know about events and</p>
       <p>workshops that may interest you!</p>
     </div>
