@@ -28,3 +28,32 @@ body {
     color: blue;
     text-align: left;
 }
+
+#topText {
+    font-weight: bolder;
+    color: #4B0A80;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 16px;
+    position: absolute;
+    text-align: left;
+    border-width: 5px 0 0 5px;
+}
+
+#rectangle {
+    width: 200px;
+    height: 100px;
+    background-color: lightgrey;
+    margin: 0 0 0 125px;
+}
+
+.RSVP {
+    color: #FFFFFF;
+    background-color: #985ACA;
+    padding: 10px 5px; 
+    border-radius: 10px;
+    position: relative;
+    margin: 10px 10px 10px 10px;    
+    text-decoration: none;
+    font-family: 'IBM Plex Sans', sans-serif;
+
+}
