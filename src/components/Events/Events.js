@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import NavBarMonth from "../NavBarMonth";
+// import NavBarMonth from "../NavBarMonth";
 import { db } from "../firebase";
 import { collection, getDocs, query, orderBy } from "firebase/firestore";
 import { Link } from "react-router-dom";
@@ -25,7 +25,7 @@ const Events = (props) => {
       <header id="topText">MakerBay Sydney</header>
       <div className="super-nav">
         <Navbar /> <br />
-        <NavBarMonth />
+        {/* <NavBarMonth /> */}
         <EventsList info={events} />
       </div>
     </div>
