@@ -23,12 +23,17 @@ const Events = (props) => {
     getEvents();
   }, []);
 
+  
   return (
     <div className="container">
       <header id="topText">MakerBay Sydney</header>
-      <h2> Event details</h2>
+      
       <div style={{ display: "inline" }}>
         <NavBarMonth />
+      <br />
+      <br />
+      <div/>
+        {/* <NavBarMonth /> */}
         <Navbar />
         <EventsList info={events} />
       </div>
@@ -50,7 +55,9 @@ const Navbar = () => {
       <a href="#" className="navBar">
         Events & Workshops
       </a>
-      <Link to="/user" className="navBar"><span id="mail"></span>
+
+      <Link to="/user" className="navBar">
+        <span id="mail"></span>
         Subscribe
       </Link>
     </div>
@@ -67,9 +74,12 @@ const EventsList = (props) => {
     <div>
       {events.map((event) => {
         return (
-          <div key={event.id}>
-            <h2>{event.month}</h2>
-            <img src="https://via.placeholder.com/350x197" />
+          <div className="e-box" key={event.id}>
+            <h2 className="e-month">{event.month}</h2>
+            <img
+              className="e-banner"
+              src="https://via.placeholder.com/700x350"
+            />
             <br></br>
             <h2 className="title">{event.title}</h2>
             <p className="date">{event.date}</p>
@@ -83,11 +93,13 @@ const EventsList = (props) => {
           </div>
         );
       })}
-      <Link to="/user" className="???">
-        Subscribe to our newsletter
+      <Link to="/user">
+        <button className="subBar">Subscribe to our newsletter</button>
       </Link>
-      <p>Be the first to know about events and</p>
-      <p>workshops that may interest you!</p>
+      <p className="e-footer">
+        Be the first to know about events and <br />
+        workshops that may interest you!
+      </p>
     </div>
   );
 };

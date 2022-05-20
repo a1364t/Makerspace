@@ -1,112 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&family=Inter&display=swap");
+
 body {
-    background-color: #FFFFFF; 
-    min-width: 390px;
-    max-width: 960px;
-    position: relative;
-    margin: auto;
-
-
+  background-color: #ffffff;
+  min-width: 390px;
+  max-width: 960px;
+  position: relative;
+  margin: auto;
 }
 
 .container {
-    text-align: center;
-    width: 50%;
-    margin: auto;
-    border: solid 1px black;
-    padding: 10px;
+  text-align: center;
+  width: 70%;
+  margin: auto;
+  padding: 10px;
+  font-family: "Inter", sans-serif;
+}
+
+.e-nav {
+  display: flex;
+  justify-content: space-around;
 }
 
 .title {
-    font-weight: bold;
-    text-align: left;
+  font-weight: bold;
+  text-align: left;
+  font-size: 1em;
+  line-height: 1.1em;
 }
 
 .date {
-    text-align: left;
+  text-align: left;
+  font-size: 0.875em;
+  line-height: 1.1em;
 }
 
 .description {
-    color: black;
-    text-align: left;
+  color: black;
+  text-align: left;
+  font-size: 0.875em;
+  line-height: 1.5em;
+}
+
+.e-month {
+  text-align: left;
+  font-size: 2em;
+}
+
+.e-banner {
+  max-width: 100%;
+  height: auto;
+  width: auto;
 }
 
 #topText {
-    font-weight: bolder;
-    color: #4B0A80;
-    font-family: 'IBM Plex Sans', sans-serif;
-    font-size: 16px;
-    position: absolute;
-    text-align: left;
-    border-width: 5px 0 0 5px;
-}
-
-#rectangle {
-    width: 200px;
-    height: 100px;
-    background-color: lightgrey;
-    margin: 0 0 0 125px;
+  font-weight: bolder;
+  color: #4b0a80;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 16px;
+  position: absolute;
+  text-align: left;
+  border-width: 5px 0 0 5px;
 }
 
 .RSVP {
-    color: #FFFFFF;
-    background-color: #985ACA;
-    padding: 10px 5px; 
-    border-radius: 10px;
-    position: relative;
-    margin: 10px 10px 10px 10px;    
-    text-decoration: none;
-    font-family: 'IBM Plex Sans', sans-serif;
-
+  color: #ffffff;
+  background-color: #985aca;
+  padding: 10px 5px;
+  border-radius: 10px;
+  position: relative;
+  margin: 10px 10px 10px 10px;
+  text-decoration: none;
+  font-family: "IBM Plex Sans", sans-serif;
 }
 
 .navBar {
-    font-family: 'IBM Plex Sans', sans-serif;
-    text-decoration: none;
-    color: black;
-    font-weight: 200;
-    padding: 5px;
+  font-family: "IBM Plex Sans", sans-serif;
+  text-decoration: none;
+  color: black;
+  font-weight: 200;
+  padding: 5px;
+  display: flex;
+  justify-content: space-around;
 }
 .navBar :hover {
-    text-decoration: solid 3px underline;
-    text-decoration-color: #A465D6;
+  border-bottom: solid 4px #a465d6;
 }
 
 #mail,
 #mail::after {
-    display: inline-flex;
-    box-sizing: border-box;
-    height: 14px;
-    border: 2px solid;
-    color: purple;
-    /* outline: 6px solid #4B0A80; */
+  display: inline-flex;
+  box-sizing: border-box;
+  height: 14px;
+  border: 2px solid;
+  color: purple;
+  /* outline: 6px solid #4B0A80; */
 }
 #mail {
-    overflow: hidden;
-    transform: scale(var(--ggs,1));
-    position: relative;
-    width: 19px;
-    border-radius: 2px
+  overflow: hidden;
+  transform: scale(var(--ggs, 1));
+  position: relative;
+  width: 19px;
+  border-radius: 2px;
 }
 #mail::after {
-    content: "";
-    position: absolute;
-    border-radius: 3px;
-    width: 14px;
-    transform: rotate(-45deg);
-    bottom: 5px;
-    left: 0;
-    color: white;
-    outline: 2px solid #4B0A80;
-} 
+  content: "";
+  position: absolute;
+  border-radius: 3px;
+  width: 14px;
+  transform: rotate(-45deg);
+  bottom: 5px;
+  left: 0;
+  color: white;
+  outline: 2px solid #4b0a80;
+}
 
-.months {
+.subBar {
+  color: #ffffff;
+  background-color: #4c0a81;
+  padding: 0.75em 0.6em;
+  border-radius: 10px;
+  margin: 10px 10px 10px 10px;
+  text-decoration: none;
+  font-family: "IBM Plex Sans", sans-serif;
+  width: 16em;
+  white-space: nowrap;
+  font-size: 0.9em;
+  font-weight: bold;
+}
+
+.e-footer {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 1em;
+  line-height: 1.2em;
+}
+
+/* .months {
     margin: 4px, 4px;
     padding: 4px;
     width: 300px;
     overflow: auto;
-    white-space: nowrap;
-    
-}
+    white-space: nowrap;    
+} */
 
 /* Horizontal Navbar */
 
