@@ -2,7 +2,7 @@ import { collection, getDocs } from "firebase/firestore";
 import React, {useState} from "react";
 import { db } from "./firebase";
 import {query, where} from 'firebase/firestore'
-import { Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const NavBarMonth = () => {
   const [firstMonth, setFirstMonth] = useState('');
@@ -15,7 +15,7 @@ const NavBarMonth = () => {
     const q = query(searchEvents, where('month_id', '>=', firstMonth), where('month_id', '<=', lastMonth));
     const data = await getDocs(q);    
     setSearch(data.docs.map((search) => ({...search.data(), id:search.id})));
-    
+    console.log(search);
   };
 
   const _handleSubmit = (event) => {
