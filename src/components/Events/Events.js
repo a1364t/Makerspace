@@ -1,11 +1,8 @@
 import React, { useState, useEffect } from "react";
-import NavBarMonth from '../NavBarMonth';
+import NavBarMonth from "../NavBarMonth";
 
 import { db } from "../firebase";
-import {
-  collection,  
-  getDocs  
-} from "firebase/firestore";
+import { collection, getDocs } from "firebase/firestore";
 import { Link } from "react-router-dom";
 
 import "./Events.css";
@@ -23,18 +20,12 @@ const Events = (props) => {
     getEvents();
   }, []);
 
-  
   return (
     <div className="container">
       <header id="topText">MakerBay Sydney</header>
-      
-      <div>
+      <div className="super-nav">
+        <Navbar /> <br />
         <NavBarMonth />
-      <br />
-      <br />
-      <div/>
-        {/* <NavBarMonth /> */}
-        <Navbar />
         <EventsList info={events} />
       </div>
     </div>
@@ -76,7 +67,7 @@ const EventsList = (props) => {
             <img
               className="e-banner"
               src="https://via.placeholder.com/700x350"
-              alt='placeholder'
+              alt="placeholder"
             />
             <br></br>
             <h2 className="title">{event.title}</h2>
