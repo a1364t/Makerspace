@@ -1,6 +1,6 @@
 import React, { useState, useEffect, Component } from "react";
 import HorizontalScroll from "react-scroll-horizontal";
-import { db } from "./firebase";
+import { db } from "../firebase";
 import {
   collection,
   getDoc,
