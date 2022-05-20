@@ -1,12 +1,8 @@
-import React, { useState, useEffect, Component } from "react";
+import React, { useState, useEffect } from "react";
+import NavBarMonth from "../NavBarMonth";
+
 import { db } from "../firebase";
-import {
-  collection,
-  getDoc,
-  doc,
-  getDocs,
-  updateDoc,
-} from "firebase/firestore";
+import { collection, getDocs } from "firebase/firestore";
 import { Link } from "react-router-dom";
 
 import "./Events.css";
@@ -27,24 +23,24 @@ const Events = (props) => {
   return (
     <div className="container">
       <header id="topText">MakerBay Sydney</header>
-      <br />
-      <br />
-      <div>
-        {/* <NavBarMonth /> */}
-        <Navbar />
+      <div className="super-nav">
+        <Navbar /> <br />
+        <NavBarMonth />
         <EventsList info={events} />
       </div>
     </div>
   );
 };
 
+
+
 const Navbar = () => {
   return (
     <div className="navBar">
-      <a href="#" className="navBar">
+      <a href="/" className="navBar">
         About
       </a>
-      <a href="#" className="navBar">
+      <a href="/" className="navBar">
         Events & Workshops
       </a>
 
@@ -71,13 +67,14 @@ const EventsList = (props) => {
             <img
               className="e-banner"
               src="https://via.placeholder.com/700x350"
+              alt="placeholder"
             />
             <br></br>
             <h2 className="title">{event.title}</h2>
             <p className="date">{event.date}</p>
             <p className="description">{event.description}</p>
             <button className="RSVP">
-              <a href="#" className="RSVP">
+              <a href="/" className="RSVP">
                 Learn More & RSVP
               </a>
             </button>

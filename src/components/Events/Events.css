@@ -17,6 +17,10 @@ body {
   /* border: 1px solid black; */
 }
 
+.super-nav {
+  margin-top: 2.5em;
+}
+
 .e-nav {
   display: flex;
   justify-content: space-around;
