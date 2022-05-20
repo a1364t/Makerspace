@@ -1,10 +1,10 @@
 import React from "react";
-import NavBarMonth from "./NavBarMonth";
+
 
 const Search = () => {
     return(
         <div>
-            search coming soon
+            search is coming soon
         </div>
     )
 }

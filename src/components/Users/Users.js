@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { db } from "../firebase";
 import { collection, addDoc } from "firebase/firestore";
 import { useNavigate } from "react-router-dom";
@@ -43,7 +43,7 @@ const Users = (props) => {
   const _handleSubmit = (event) => {
     event.preventDefault();
 
-    const spCharRegExp = /[ `!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
+    const spCharRegExp = /[ `!@#$%^&*()_+\-=[\]{};':"\\|,.<>/?~]/;
     const numberRegExp = /[0-9]/;
     const firstNameErrorsArr = [];
     const lastNameErrorsArr = [];

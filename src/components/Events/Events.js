@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import NavBarMonth from './NavBarMonth';
+import NavBarMonth from '../NavBarMonth';
 
-import { db } from "./firebase";
+import { db } from "../firebase";
 import {
   collection,  
   getDocs  
@@ -28,7 +28,7 @@ const Events = (props) => {
     <div className="container">
       <header id="topText">MakerBay Sydney</header>
       
-      <div style={{ display: "inline" }}>
+      <div>
         <NavBarMonth />
       <br />
       <br />
@@ -49,10 +49,10 @@ const Events = (props) => {
 const Navbar = () => {
   return (
     <div className="navBar">
-      <a href="#" className="navBar">
+      <a href="/" className="navBar">
         About
       </a>
-      <a href="#" className="navBar">
+      <a href="/" className="navBar">
         Events & Workshops
       </a>
 
@@ -79,13 +79,14 @@ const EventsList = (props) => {
             <img
               className="e-banner"
               src="https://via.placeholder.com/700x350"
+              alt='placeholder'
             />
             <br></br>
             <h2 className="title">{event.title}</h2>
             <p className="date">{event.date}</p>
             <p className="description">{event.description}</p>
             <button className="RSVP">
-              <a href="#" className="RSVP">
+              <a href="/" className="RSVP">
                 Learn More & RSVP
               </a>
             </button>
