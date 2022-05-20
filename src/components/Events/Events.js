@@ -1,18 +1,8 @@
 import React, { useState, useEffect } from "react";
-<<<<<<< HEAD
 import NavBarMonth from "../NavBarMonth";
 
 import { db } from "../firebase";
 import { collection, getDocs } from "firebase/firestore";
-=======
-import NavBarMonth from '../NavBarMonth';
-
-import { db } from "../firebase";
-import {
-  collection,  
-  getDocs  
-} from "firebase/firestore";
->>>>>>> cc1470df238ba49a8ed57968b952a2fa2a70480b
 import { Link } from "react-router-dom";
 
 import "./Events.css";
@@ -75,7 +65,7 @@ const EventsList = (props) => {
             <img
               className="e-banner"
               src="https://via.placeholder.com/700x350"
-              alt='placeholder'
+              alt="placeholder"
             />
             <br></br>
             <h2 className="title">{event.title}</h2>
