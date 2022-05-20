@@ -50,12 +50,15 @@ const Users = (props) => {
     const emailErrorsArr = [];
 
     if (
+      !(firstName.length > 0) ||
       !(firstName.length > 1) ||
       spCharRegExp.test(firstName) ||
       numberRegExp.test(firstName) ||
+      !(lastName.length > 0) ||
       !(lastName.length > 1) ||
       spCharRegExp.test(lastName) ||
       numberRegExp.test(lastName) ||
+      !(email.length > 0) ||
       !email.includes(".") ||
       !(
         coding ||
@@ -68,6 +71,9 @@ const Users = (props) => {
         woodWorking
       )
     ) {
+      if (!(firstName.length > 0)) {
+        firstNameErrorsArr.push("This is a required field");
+      }
       if (!(firstName.length > 1)) {
         firstNameErrorsArr.push("A name must be atleast two letters");
       }
@@ -78,6 +84,9 @@ const Users = (props) => {
         firstNameErrorsArr.push("A name cannot contain numbers");
       }
       setFirstNameError(firstNameErrorsArr); // setting the firstNameError based on the conditional result
+      if (!(lastName.length > 0)) {
+        lastNameErrorsArr.push("This is a required field");
+      }
 
       if (!(lastName.length > 1)) {
         lastNameErrorsArr.push("A name must be atleast two letters");
@@ -90,8 +99,13 @@ const Users = (props) => {
       }
       setlastNameError(lastNameErrorsArr); // setting the lastNameError based on the conditional result
 
+      if (!(email.length > 0)) {
+        emailErrorsArr.push("This is a required field");
+      }
       if (!email.includes(".")) {
-        emailErrorsArr.push("An email address must contain one .");
+        emailErrorsArr.push(
+          "An email address must contain atleast one full stop"
+        );
       }
       setEmailError(emailErrorsArr);
 
@@ -126,59 +140,59 @@ const Users = (props) => {
       <h3 className="topInfo">In case you were wondering...</h3>
       <ul className="topInfo">
         <li>You will receive emails from us at most once 3 weeks</li>
+        <br />
         <li>Your personal information will not be be shared</li>
       </ul>
       <form onSubmit={_handleSubmit}>
         <label className="firstName">
-          First name*
-          <input className="firstInputName"
+          <p>First name*</p>
+
+          <input
+            className="firstInputName"
             type="text"
             name="firstName"
             onInput={(e) => {
               setFirstNameError([]);
               setFirstName(e.target.value);
             }}
-            required
           />
         </label>
         {firstNameError.length > 0 ? (
-          <div style={{'color': 'red'}}>
+          <ul className="name-email-error">
             {firstNameError.map((error) => {
-              return <p key={Math.random()}>{error}</p>;
+              return <li key={Math.random()}> {error}</li>;
             })}
-          </div>
+          </ul>
         ) : (
           ""
         )}
         <label className="lastName">
-          <br />
-          Last name*
-          <input className="lastInputName"
+          <p> Last name* </p>
+          <input
+            className="lastInputName"
             type="text"
             name="lastName"
             onInput={(e) => {
               setlastNameError([]);
               setLastName(e.target.value);
             }}
-            required
           />
         </label>
         {lastNameError.length > 0 ? (
-          <div style={{'color': 'red'}}>
+          <ul className="name-email-error">
             {lastNameError.map((error) => {
-              return <p key={Math.random()}>{error}</p>;
+              return <li key={Math.random()}>{error}</li>;
             })}
-          </div>
+          </ul>
         ) : (
           ""
         )}
         <label className="email">
-          <br />
-          Email*
-          <input className="emailInput"
+          <p>Email*</p>
+          <input
+            className="emailInput"
             type="email"
             name="email"
-            required
             onInput={(e) => {
               setEmailError("");
               setEmail(e.target.value);
@@ -186,21 +200,23 @@ const Users = (props) => {
           />
         </label>
         {emailError.length > 0 ? (
-          <div style={{'color': 'red'}}>
+          <ul className="name-email-error">
             {emailError.map((error) => {
-              return <p key={Math.random()}>{error}</p>;
+              return <li key={Math.random()}>{error}</li>;
             })}
-          </div>
+          </ul>
         ) : (
           ""
         )}
         <br />
         <label className="interested">
-          What types of events are you interested in?
-          <br />
-          Select at least one from the EventsList <br />
-          <p style={{'color': 'red'}}>{checkboxError}</p>
-          <input className="checkbox"
+          <div class="interested-qn">
+            What types of events are you interested in?
+          </div>
+          Select at least one from the list <br />
+          <p className="name-email-error">{checkboxError}</p>
+          <input
+            className="checkbox"
             type="checkbox"
             name="coding"
             onChange={(e) => {
@@ -209,7 +225,8 @@ const Users = (props) => {
             }}
           />{" "}
           Coding <br />
-          <input className="checkbox"
+          <input
+            className="checkbox"
             type="checkbox"
             name="3DPrinting"
             onChange={(e) => {
@@ -218,7 +235,8 @@ const Users = (props) => {
             }}
           />{" "}
           3D Printing <br />
-          <input className="checkbox"
+          <input
+            className="checkbox"
             type="checkbox"
             name="laserCutting"
             onChange={(e) => {
@@ -228,7 +246,8 @@ const Users = (props) => {
           />{" "}
           Laser Cutting
           <br />
-          <input className="checkbox"
+          <input
+            className="checkbox"
             type="checkbox"
             name="=soldering"
             onChange={(e) => {
@@ -237,7 +256,8 @@ const Users = (props) => {
             }}
           />{" "}
           Soldering <br />
-          <input className="checkbox"
+          <input
+            className="checkbox"
             type="checkbox"
             name="electronics"
             onChange={(e) => {
@@ -246,7 +266,8 @@ const Users = (props) => {
             }}
           />{" "}
           Electronics <br />
-          <input className="checkbox"
+          <input
+            className="checkbox"
             type="checkbox"
             name="robotics"
             onChange={(e) => {
@@ -255,7 +276,8 @@ const Users = (props) => {
             }}
           />{" "}
           Robotics <br />
-          <input className="checkbox"
+          <input
+            className="checkbox"
             type="checkbox"
             name="sewing"
             onChange={(e) => {
@@ -264,7 +286,8 @@ const Users = (props) => {
             }}
           />{" "}
           Sewing <br />
-          <input className="checkbox"
+          <input
+            className="checkbox"
             type="checkbox"
             name="woodWorking"
             onChange={(e) => {
@@ -273,7 +296,7 @@ const Users = (props) => {
             }}
           />{" "}
           Wood Working <br />
-          <input className="submitForm" type="submit" value="Subscribe"  />
+          <input className="submitForm" type="submit" value="Subscribe" />
         </label>
       </form>
     </div>
