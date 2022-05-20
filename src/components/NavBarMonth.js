@@ -20,10 +20,12 @@ const NavBarMonth = () => {
 
   const _handleSubmit = (event) => {
     event.preventDefault();
+    
    setFirstMonth(document.getElementById('first').value);    
    setLastMonth(document.getElementById('last').value); 
    fetchEvents();
    navigate('/search');
+   return [firstMonth, lastMonth]
   }
 
   return (

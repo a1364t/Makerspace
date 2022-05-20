@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import NavBarMonth from "../NavBarMonth";
-
 import { db } from "../firebase";
 import { collection, getDocs } from "firebase/firestore";
 import { Link } from "react-router-dom";
@@ -31,6 +30,10 @@ const Events = (props) => {
     </div>
   );
 };
+
+
+
+
 
 const Navbar = () => {
   return (
