@@ -4,6 +4,8 @@ import { db } from "./firebase";
 import {query, where} from 'firebase/firestore'
 import { useNavigate } from "react-router-dom";
 
+import "./NavBarMonth.css";
+
 const NavBarMonth = () => {
   const [firstMonth, setFirstMonth] = useState('');
   const [lastMonth, setLastMonth] = useState('');
@@ -27,10 +29,10 @@ const NavBarMonth = () => {
   }
 
   return (
-    <div>
+    <div className="container">
     <form onSubmit={ _handleSubmit }>
-      <label>Start date</label>  
-        <select id='first'>
+      <label className="start">Start date</label>  
+        <select id='first' className="start">
           <option value='1'>JANUARY</option>
           <option value='2'>FEBRUARY</option>
           <option value='3'>MARCH</option>
@@ -44,7 +46,7 @@ const NavBarMonth = () => {
           <option value='11'>NOVEMBER</option>
           <option value='12'>DECEMBER</option>
         </select> 
-        <label>End date:</label>
+        <label className="end">End date:</label>
         <select id='last'>        
           <option value='1'>JANUARY</option>
           <option value='2'>FEBRUARY</option>
