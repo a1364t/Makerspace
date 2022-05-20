@@ -210,7 +210,7 @@ const Users = (props) => {
         )}
         <br />
         <label className="interested">
-          <div class="interested-qn">
+          <div className="interested-qn">
             What types of events are you interested in?
           </div>
           Select at least one from the list <br />

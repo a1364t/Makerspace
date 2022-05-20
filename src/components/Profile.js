@@ -12,10 +12,10 @@ const Profile = () => {
         const getUsers = async () => {
         const usersCollectionRef = collection(db, 'users');
         const data = await getDocs(usersCollectionRef);
-        setUsers(data.docs.map((user) => ({...user.data(), id: user.id})));
-        console.log(users);
-    };getUsers();
-    }, [users]);
+        setUsers(data.docs.map((user) => ({...user.data(), id: user.id})));        
+    };
+    getUsers();
+    }, []);
 
     return(
         <div>
@@ -32,8 +32,7 @@ const UsersList = (props) => {
     const users = props.info;
     return(
         <div>
-            {users.map((user) => {
-                console.log(user.threeDPrinting);
+            {users.map((user) => {                
                 return(
                     <div key={user.id}>
                     <ul>
