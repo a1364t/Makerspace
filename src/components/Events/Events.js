@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import NavBarMonth from "../NavBarMonth";
+// import NavBarMonth from "../NavBarMonth";
 import { db } from "../firebase";
-import { collection, getDocs } from "firebase/firestore";
+import { collection, getDocs, query, orderBy } from "firebase/firestore";
 import { Link } from "react-router-dom";
 
 import "./Events.css";
@@ -11,7 +11,8 @@ const Events = (props) => {
 
   const getEvents = async () => {
     const eventsCollectionRef = collection(db, "events");
-    const data = await getDocs(eventsCollectionRef);
+    const q = query(eventsCollectionRef, orderBy("month_id"));
+    const data = await getDocs(q);
     setEvents(data.docs.map((event) => ({ ...event.data(), id: event.id })));
   };
 
@@ -24,16 +25,12 @@ const Events = (props) => {
       <header id="topText">MakerBay Sydney</header>
       <div className="super-nav">
         <Navbar /> <br />
-        <NavBarMonth />
+        {/* <NavBarMonth /> */}
         <EventsList info={events} />
       </div>
     </div>
   );
 };
-
-
-
-
 
 const Navbar = () => {
   return (
