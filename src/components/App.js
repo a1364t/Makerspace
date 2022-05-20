@@ -1,7 +1,7 @@
 import React from 'react';
 import Events from './Events/Events'
 import Users from './Users/Users';
-import Subscribed from './Subscribed';
+import Subscribed from './Subscribed/Subscribed';
 import Search from './Search';
 
 import { HashRouter as Router, Route, Routes} from 'react-router-dom';
