@@ -1,8 +1,8 @@
 import React from 'react';
-import ReactDOM from 'react-router-dom';
 import Events from './Events'
 import Users from './Users';
 import Subscribed from './Subscribed';
+import Search from './Search';
 
 import { HashRouter as Router, Route, Routes} from 'react-router-dom';
 
@@ -14,6 +14,7 @@ function App() {
           <Route path='/' element={<Events />} />
           <Route path='/user' element={<Users/>} />
           <Route path='/subscribed' element={<Subscribed/>} />
+          <Route path='/search' element={<Search />} />
         </Routes>
       </Router>
         

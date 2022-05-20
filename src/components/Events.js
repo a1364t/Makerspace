@@ -1,12 +1,10 @@
-import React, { useState, useEffect, Component } from "react";
-import HorizontalScroll from "react-scroll-horizontal";
+import React, { useState, useEffect } from "react";
+import NavBarMonth from './NavBarMonth';
+
 import { db } from "./firebase";
 import {
-  collection,
-  getDoc,
-  doc,
-  getDocs,
-  updateDoc,
+  collection,  
+  getDocs  
 } from "firebase/firestore";
 import { Link } from "react-router-dom";
 
@@ -30,7 +28,7 @@ const Events = (props) => {
       <header id="topText">MakerBay Sydney</header>
       <h2> Event details</h2>
       <div style={{ display: "inline" }}>
-        {/* <NavBarMonth /> */}
+        <NavBarMonth />
         <Navbar />
         <EventsList info={events} />
       </div>
@@ -38,19 +36,6 @@ const Events = (props) => {
   );
 };
 //////////////// Horizontal scrolling navBar
-
-// const NavBarMonth = () => {
-//     return(
-//         <div>
-//             <HorizontalScroll>
-//                 <div style={child}>
-//                     <h1>hello 1</h1>
-//                 </div>
-//             </HorizontalScroll>
-//         </div>
-//     )
-// }
-
 
 
 ///////// Horizontal NavBar ////////////// 
