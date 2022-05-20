@@ -24,8 +24,8 @@ const NavBarMonth = () => {
    setFirstMonth(document.getElementById('first').value);    
    setLastMonth(document.getElementById('last').value); 
    fetchEvents();
-   navigate('/search');
-   return [firstMonth, lastMonth]
+   //navigate('/search');
+   //return [firstMonth, lastMonth]
   }
 
   return (
