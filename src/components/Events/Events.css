@@ -16,6 +16,10 @@ body {
   font-family: "Inter", sans-serif;
 }
 
+.super-nav {
+  margin-top: 2.5em;
+}
+
 .e-nav {
   display: flex;
   justify-content: space-around;
@@ -143,7 +147,3 @@ body {
 } */
 
 /* Horizontal Navbar */
-
-
-
-
