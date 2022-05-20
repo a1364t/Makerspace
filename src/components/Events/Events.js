@@ -1,12 +1,8 @@
 import React, { useState, useEffect } from "react";
+import NavBarMonth from "./NavBarMonth";
+
 import { db } from "./firebase";
-import {
-  collection,
-  getDoc,
-  doc,
-  getDocs,
-  updateDoc,
-} from "firebase/firestore";
+import { collection, getDocs } from "firebase/firestore";
 import { Link } from "react-router-dom";
 
 import "./Events.css";
@@ -27,9 +23,12 @@ const Events = (props) => {
   return (
     <div className="container">
       <header id="topText">MakerBay Sydney</header>
-      <br />
-      <br />
-      <div>
+
+      <div style={{ display: "inline" }}>
+        <NavBarMonth />
+        <br />
+        <br />
+        <div />
         {/* <NavBarMonth /> */}
         <Navbar />
         <EventsList info={events} />
@@ -37,6 +36,9 @@ const Events = (props) => {
     </div>
   );
 };
+//////////////// Horizontal scrolling navBar
+
+///////// Horizontal NavBar //////////////
 
 const Navbar = () => {
   return (

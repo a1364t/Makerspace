@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { db } from "./firebase";
+import { db } from "../firebase";
 import { collection, addDoc } from "firebase/firestore";
 import { useNavigate } from "react-router-dom";
+
+import "./Users.css";
 
 const Users = (props) => {
   const [firstName, setFirstName] = useState("");
@@ -118,17 +120,18 @@ const Users = (props) => {
   };
 
   return (
-    <div>
-      <h1>Subscribe to our newsletter</h1>
-      <p>In case you were wondering...</p>
-      <ul>
+    <div className="container">
+      <header id="topText">MakerBay Sydney</header>
+      <h1 className="newsLetter">Subscribe to our newsletter</h1>
+      <h3 className="topInfo">In case you were wondering...</h3>
+      <ul className="topInfo">
         <li>You will receive emails from us at most once 3 weeks</li>
         <li>Your personal information will not be be shared</li>
       </ul>
       <form onSubmit={_handleSubmit}>
-        <label>
+        <label className="firstName">
           First name*
-          <input
+          <input className="firstInputName"
             type="text"
             name="firstName"
             onInput={(e) => {
@@ -147,10 +150,10 @@ const Users = (props) => {
         ) : (
           ""
         )}
-        <label>
+        <label className="lastName">
           <br />
           Last name*
-          <input
+          <input className="lastInputName"
             type="text"
             name="lastName"
             onInput={(e) => {
@@ -169,10 +172,10 @@ const Users = (props) => {
         ) : (
           ""
         )}
-        <label>
+        <label className="email">
           <br />
           Email*
-          <input
+          <input className="emailInput"
             type="email"
             name="email"
             required
@@ -192,12 +195,12 @@ const Users = (props) => {
           ""
         )}
         <br />
-        <label>
+        <label className="interested">
           What types of events are you interested in?
           <br />
           Select at least one from the EventsList <br />
           <p style={{'color': 'red'}}>{checkboxError}</p>
-          <input
+          <input className="checkbox"
             type="checkbox"
             name="coding"
             onChange={(e) => {
@@ -206,7 +209,7 @@ const Users = (props) => {
             }}
           />{" "}
           Coding <br />
-          <input
+          <input className="checkbox"
             type="checkbox"
             name="3DPrinting"
             onChange={(e) => {
@@ -215,7 +218,7 @@ const Users = (props) => {
             }}
           />{" "}
           3D Printing <br />
-          <input
+          <input className="checkbox"
             type="checkbox"
             name="laserCutting"
             onChange={(e) => {
@@ -225,7 +228,7 @@ const Users = (props) => {
           />{" "}
           Laser Cutting
           <br />
-          <input
+          <input className="checkbox"
             type="checkbox"
             name="=soldering"
             onChange={(e) => {
@@ -234,7 +237,7 @@ const Users = (props) => {
             }}
           />{" "}
           Soldering <br />
-          <input
+          <input className="checkbox"
             type="checkbox"
             name="electronics"
             onChange={(e) => {
@@ -243,7 +246,7 @@ const Users = (props) => {
             }}
           />{" "}
           Electronics <br />
-          <input
+          <input className="checkbox"
             type="checkbox"
             name="robotics"
             onChange={(e) => {
@@ -252,7 +255,7 @@ const Users = (props) => {
             }}
           />{" "}
           Robotics <br />
-          <input
+          <input className="checkbox"
             type="checkbox"
             name="sewing"
             onChange={(e) => {
@@ -261,7 +264,7 @@ const Users = (props) => {
             }}
           />{" "}
           Sewing <br />
-          <input
+          <input className="checkbox"
             type="checkbox"
             name="woodWorking"
             onChange={(e) => {
@@ -270,7 +273,7 @@ const Users = (props) => {
             }}
           />{" "}
           Wood Working <br />
-          <input type="submit" value="Subscribe" />
+          <input className="submitForm" type="submit" value="Subscribe"  />
         </label>
       </form>
     </div>
