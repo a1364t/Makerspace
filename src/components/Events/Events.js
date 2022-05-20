@@ -40,10 +40,7 @@ const Events = (props) => {
     </div>
   );
 };
-//////////////// Horizontal scrolling navBar
 
-
-///////// Horizontal NavBar ////////////// 
 
 
 const Navbar = () => {
